@@ -1,0 +1,7 @@
+work	"ALU.vhd"
+work	"DecodeUnit.vhd"
+work	"DigitController.vhd"
+work	"RegisterModule.vhd"
+work	"SegmentDecoder.vhd"
+work	"TopLevel.vhd"
+work	"lab1mem.vhd"

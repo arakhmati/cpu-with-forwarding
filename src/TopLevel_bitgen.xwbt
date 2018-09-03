@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=T:\pipelined\Lab2\TopLevel.ncd
+OUTFILE=T:\pipelined\Lab2\TopLevel.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=T:\pipelined\Lab2
+LICENSE=ISE
+USER_INFO=206667002_206666006_210660962_604

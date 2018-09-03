@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_isim_beh.exe" -prj "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_beh.prj" "work.TopLevel_TB" 

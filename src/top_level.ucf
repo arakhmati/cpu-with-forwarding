@@ -1,0 +1,17 @@
+Net clk Loc = V10;
+
+Net segments(0) LOC = T17;
+Net segments(1) LOC = T18;
+Net segments(2) LOC = U17;
+Net segments(3) LOC = U18;
+Net segments(4) LOC = M14;
+Net segments(5) LOC = N14;
+Net segments(6) LOC = L14;
+
+Net digits(0) LOC = N16;
+Net digits(1) LOC = N15;
+Net digits(2) LOC = P18;
+Net digits(3) LOC = P17;
+
+Net manual_clk Loc = C9;
+NET "manual_clk" CLOCK_DEDICATED_ROUTE = FALSE;

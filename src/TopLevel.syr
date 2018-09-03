@@ -1,0 +1,997 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/SegmentDecoder.vhd" into library work
+Parsing entity <SegmentDecoder>.
+Parsing architecture <DataFlow> of entity <segmentdecoder>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Components.vhd" into library work
+Parsing package <Components>.
+Parsing package body <Components>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegMEM_WB.vhd" into library work
+Parsing entity <RegMEM_WB>.
+Parsing architecture <Behavioral> of entity <regmem_wb>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterN.vhd" into library work
+Parsing entity <RegisterN>.
+Parsing architecture <Behavioral> of entity <registern>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterFile.vhd" into library work
+Parsing entity <RegisterFile>.
+Parsing architecture <Behavioral> of entity <registerfile>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegIF_ID.vhd" into library work
+Parsing entity <RegIF_ID>.
+Parsing architecture <Behavioral> of entity <regif_id>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegID_EX.vhd" into library work
+Parsing entity <RegID_EX>.
+Parsing architecture <Behavioral> of entity <regid_ex>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegEX_MEM.vhd" into library work
+Parsing entity <RegEX_MEM>.
+Parsing architecture <Behavioral> of entity <regex_mem>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionMemory.vhd" into library work
+Parsing entity <InstructionMemory>.
+Parsing architecture <Behavioural> of entity <instructionmemory>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionDecoder.vhd" into library work
+Parsing entity <InstructionDecoder>.
+Parsing architecture <Behavioral> of entity <instructiondecoder>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DigitController.vhd" into library work
+Parsing entity <DigitController>.
+Parsing architecture <Behavioral> of entity <digitcontroller>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Debouncer.vhd" into library work
+Parsing entity <Debouncer>.
+Parsing architecture <Behavioral> of entity <debouncer>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataMemory.vhd" into library work
+Parsing entity <DataMemory>.
+Parsing architecture <Behavioural> of entity <datamemory>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataHazardDetector.vhd" into library work
+Parsing entity <DataHazardDetector>.
+Parsing architecture <Behavioral> of entity <datahazarddetector>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Counter.vhd" into library work
+Parsing entity <Counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_2_mux.vhd" into library work
+Parsing entity <ALU_src_2_mux>.
+Parsing architecture <Behavioral> of entity <alu_src_2_mux>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_1_mux.vhd" into library work
+Parsing entity <ALU_src_1_mux>.
+Parsing architecture <Behavioral> of entity <alu_src_1_mux>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" into library work
+Parsing entity <TopLevel>.
+Parsing architecture <Structural> of entity <toplevel>.
+WARNING:HDLCompiler:946 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" Line 80: Actual for formal port we is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TopLevel> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Debouncer> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Counter> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <InstructionMemory> (architecture <Behavioural>) with generics from library <work>.
+
+Elaborating entity <RegIF_ID> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <InstructionDecoder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegisterFile> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegID_EX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU_src_1_mux> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_1_mux.vhd" Line 26: wb_control should be on the sensitivity list of the process
+
+Elaborating entity <ALU_src_2_mux> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_2_mux.vhd" Line 28: wb_control should be on the sensitivity list of the process
+
+Elaborating entity <ALU> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegEX_MEM> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <DataMemory> (architecture <Behavioural>) with generics from library <work>.
+
+Elaborating entity <RegMEM_WB> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegisterN> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <DigitController> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <SegmentDecoder> (architecture <DataFlow>) from library <work>.
+
+Elaborating entity <DataHazardDetector> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd".
+INFO:Xst:3210 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" line 128: Output port <wb_reg_file_out_src_1> of the instance <MEM_WB> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" line 128: Output port <wb_reg_file_out_src_2> of the instance <MEM_WB> is unconnected or connected to loadless signal.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <TopLevel> synthesized.
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Debouncer.vhd".
+        DEBOUNCER_FREQUENCY = 1
+    Found 1-bit register for signal <d2>.
+    Found 1-bit register for signal <debouncedButton>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <d1>.
+    Found 2-bit adder for signal <count[1]_GND_8_o_add_0_OUT> created at line 37.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+Unit <Debouncer> synthesized.
+
+Synthesizing Unit <Counter>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Counter.vhd".
+        D_WIDTH = 8
+    Found 8-bit register for signal <counter_value>.
+    Found 8-bit adder for signal <counter_value[7]_GND_9_o_add_0_OUT> created at line 25.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <Counter> synthesized.
+
+Synthesizing Unit <InstructionMemory>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionMemory.vhd".
+        D_WIDTH = 16
+        A_WIDTH = 8
+    Found 256x16-bit single-port RAM <Mram_memory> for signal <memory>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <InstructionMemory> synthesized.
+
+Synthesizing Unit <RegIF_ID>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegIF_ID.vhd".
+        Width = 16
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <RegIF_ID> synthesized.
+
+Synthesizing Unit <InstructionDecoder>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionDecoder.vhd".
+        D_WIDTH = 16
+    Summary:
+	inferred  48 Multiplexer(s).
+Unit <InstructionDecoder> synthesized.
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterFile.vhd".
+        N_REGISTERS = 3
+        D_WIDTH = 16
+    Found 8x16-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <RegisterFile> synthesized.
+
+Synthesizing Unit <RegID_EX>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegID_EX.vhd".
+    Found 16-bit register for signal <ex_reg_file_out_src_2>.
+    Found 4-bit register for signal <ex_control_op_code>.
+    Found 1-bit register for signal <ex_control_reg_file_in_we>.
+    Found 3-bit register for signal <ex_control_reg_file_in_sel_src_1>.
+    Found 3-bit register for signal <ex_control_reg_file_in_sel_src_2>.
+    Found 3-bit register for signal <ex_control_reg_file_in_sel_dst>.
+    Found 1-bit register for signal <ex_control_alu_in_c_in>.
+    Found 3-bit register for signal <ex_control_alu_in_sel>.
+    Found 1-bit register for signal <ex_control_alu_src_2_sel_mux>.
+    Found 16-bit register for signal <ex_control_immediate>.
+    Found 1-bit register for signal <ex_control_d_mem_input_we>.
+    Found 1-bit register for signal <ex_control_reg_file_data_in_mux>.
+    Found 1-bit register for signal <ex_control_disp_reg_we>.
+    Found 16-bit register for signal <ex_reg_file_out_src_1>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+Unit <RegID_EX> synthesized.
+
+Synthesizing Unit <ALU_src_1_mux>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_1_mux.vhd".
+        D_WIDTH = 16
+WARNING:Xst:647 - Input <ex_reg_file_out_src_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_in_sel_dst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hazard_mem_ex_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hazard_wb_ex_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_c_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_overflow> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_lt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_c_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_overflow> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_lt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <ALU_src_1_mux> synthesized.
+
+Synthesizing Unit <ALU_src_2_mux>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_2_mux.vhd".
+        D_WIDTH = 16
+WARNING:Xst:647 - Input <ex_control_op_code> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_src_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_src_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_dst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_reg_file_out_src_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_in_sel_dst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hazard_mem_ex_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hazard_wb_ex_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_d_mem_input_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_c_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_overflow> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_alu_out_lt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_c_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_overflow> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_alu_out_lt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <ALU_src_2_mux> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU.vhd".
+        D_WIDTH = 16
+        ALU_SEL_SIZE = 3
+    Found 17-bit adder for signal <n0126> created at line 93.
+    Found 17-bit adder for signal <zTemp> created at line 93.
+    Found 16-bit shifter logical left for signal <x[15]_y[15]_shift_left_20_OUT> created at line 101
+    Found 16-bit shifter logical right for signal <x[15]_y[15]_shift_right_21_OUT> created at line 104
+    Found 16-bit 7-to-1 multiplexer for signal <z> created at line 30.
+    Found 16-bit comparator greater for signal <lt> created at line 107
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  19 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <RegEX_MEM>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegEX_MEM.vhd".
+        WIDTH = 16
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_src_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_src_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_immediate> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_src_2_sel_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <mem_reg_file_out_src_2>.
+    Found 16-bit register for signal <mem_alu_out_data>.
+    Found 1-bit register for signal <mem_alu_out_c_out>.
+    Found 1-bit register for signal <mem_alu_out_overflow>.
+    Found 1-bit register for signal <mem_alu_out_lt>.
+    Found 4-bit register for signal <mem_control_op_code>.
+    Found 1-bit register for signal <mem_control_reg_file_in_we>.
+    Found 3-bit register for signal <mem_control_reg_file_in_sel_dst>.
+    Found 1-bit register for signal <mem_control_d_mem_input_we>.
+    Found 1-bit register for signal <mem_control_reg_file_data_in_mux>.
+    Found 1-bit register for signal <mem_control_disp_reg_we>.
+    Found 16-bit register for signal <mem_reg_file_out_src_1>.
+    Summary:
+	inferred  62 D-type flip-flop(s).
+Unit <RegEX_MEM> synthesized.
+
+Synthesizing Unit <DataMemory>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataMemory.vhd".
+        D_WIDTH = 16
+        A_WIDTH = 8
+    Found 256x16-bit single-port RAM <Mram_memory> for signal <memory>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <DataMemory> synthesized.
+
+Synthesizing Unit <RegMEM_WB>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegMEM_WB.vhd".
+        WIDTH = 16
+WARNING:Xst:647 - Input <mem_control_d_mem_input_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <wb_reg_file_out_src_2>.
+    Found 16-bit register for signal <wb_alu_out_data>.
+    Found 1-bit register for signal <wb_alu_out_c_out>.
+    Found 1-bit register for signal <wb_alu_out_overflow>.
+    Found 1-bit register for signal <wb_alu_out_lt>.
+    Found 4-bit register for signal <wb_control_op_code>.
+    Found 1-bit register for signal <wb_control_reg_file_in_we>.
+    Found 3-bit register for signal <wb_control_reg_file_in_sel_dst>.
+    Found 1-bit register for signal <wb_control_reg_file_data_in_mux>.
+    Found 1-bit register for signal <wb_control_disp_reg_we>.
+    Found 16-bit register for signal <wb_d_mem_output>.
+    Found 16-bit register for signal <wb_reg_file_out_src_1>.
+    Summary:
+	inferred  77 D-type flip-flop(s).
+Unit <RegMEM_WB> synthesized.
+
+Synthesizing Unit <RegisterN>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterN.vhd".
+        Width = 16
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <RegisterN> synthesized.
+
+Synthesizing Unit <DigitController>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DigitController.vhd".
+        FREQUENCY = 1
+    Found 4-bit register for signal <digits>.
+    Found 4-bit register for signal <en>.
+    Found 4-bit register for signal <sub_sequence>.
+    Found 2-bit register for signal <clkdiv>.
+    Found finite state machine <FSM_0> for signal <en>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clkdiv<1> (rising_edge)                        |
+    | Power Up State     | 0111                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <clkdiv[1]_GND_24_o_add_0_OUT> created at line 38.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred  20 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <DigitController> synthesized.
+
+Synthesizing Unit <SegmentDecoder>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/SegmentDecoder.vhd".
+    Summary:
+	no macro.
+Unit <SegmentDecoder> synthesized.
+
+Synthesizing Unit <DataHazardDetector>.
+    Related source file is "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataHazardDetector.vhd".
+WARNING:Xst:647 - Input <ex_control_op_code> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_sel_dst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_immediate> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_control_op_code> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_op_code> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_in_c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_alu_src_2_sel_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_d_mem_input_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_control_d_mem_input_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_in_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_reg_file_data_in_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_control_disp_reg_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit comparator equal for signal <ex_control_reg_file_in_sel_src_1[2]_mem_control_reg_file_in_sel_dst[2]_equal_3_o> created at line 22
+    Found 3-bit comparator equal for signal <ex_control_reg_file_in_sel_src_2[2]_mem_control_reg_file_in_sel_dst[2]_equal_6_o> created at line 33
+    Found 3-bit comparator equal for signal <ex_control_reg_file_in_sel_src_1[2]_wb_control_reg_file_in_sel_dst[2]_equal_9_o> created at line 44
+    Found 3-bit comparator equal for signal <ex_control_reg_file_in_sel_src_2[2]_wb_control_reg_file_in_sel_dst[2]_equal_12_o> created at line 55
+    Summary:
+	inferred   4 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <DataHazardDetector> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x16-bit single-port RAM                            : 2
+ 8x16-bit dual-port RAM                                : 2
+# Adders/Subtractors                                   : 5
+ 17-bit adder                                          : 2
+ 2-bit adder                                           : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 48
+ 1-bit register                                        : 22
+ 16-bit register                                       : 12
+ 2-bit register                                        : 2
+ 3-bit register                                        : 6
+ 4-bit register                                        : 5
+ 8-bit register                                        : 1
+# Comparators                                          : 5
+ 16-bit comparator greater                             : 1
+ 3-bit comparator equal                                : 4
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 43
+ 16-bit 2-to-1 multiplexer                             : 17
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 15
+ 4-bit 2-to-1 multiplexer                              : 20
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Counter>.
+The following registers are absorbed into counter <counter_value>: 1 register on signal <counter_value>.
+Unit <Counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Debouncer>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DigitController>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+Unit <DigitController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <InstructionMemory>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memory> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input_addr>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstructionMemory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RegisterFile>.
+INFO:Xst:3231 - The small RAM <Mram_registers1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <input_we>      | high     |
+    |     addrA          | connected to signal <input_sel_dst> |          |
+    |     diA            | connected to signal <input_data>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <input_sel_src_2> |          |
+    |     doB            | connected to signal <output_src_2>  |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_registers> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <input_we>      | high     |
+    |     addrA          | connected to signal <input_sel_dst> |          |
+    |     diA            | connected to signal <input_data>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <input_sel_src_1> |          |
+    |     doB            | connected to signal <output_src_1>  |          |
+    -----------------------------------------------------------------------
+Unit <RegisterFile> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TopLevel>.
+INFO:Xst:3226 - The RAM <DMemory/Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <MEM_WB/wb_d_mem_output>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <debounced_clk> | rise     |
+    |     weA            | connected to signal <mem_control_d_mem_input_we> | high     |
+    |     addrA          | connected to signal <mem_alu_out_data<7:0>> |          |
+    |     diA            | connected to signal <mem_reg_file_out_src_2> |          |
+    |     doA            | connected to signal <wb_d_mem_output> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <TopLevel> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x16-bit single-port block RAM                      : 1
+ 256x16-bit single-port distributed RAM                : 1
+ 8x16-bit dual-port distributed RAM                    : 2
+# Adders/Subtractors                                   : 1
+ 17-bit adder carry in                                 : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 188
+ Flip-Flops                                            : 188
+# Comparators                                          : 5
+ 16-bit comparator greater                             : 1
+ 3-bit comparator equal                                : 4
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 43
+ 16-bit 2-to-1 multiplexer                             : 17
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 15
+ 4-bit 2-to-1 multiplexer                              : 20
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <EX_MEM/mem_alu_out_overflow> of sequential type is unconnected in block <TopLevel>.
+WARNING:Xst:2677 - Node <EX_MEM/mem_alu_out_lt> of sequential type is unconnected in block <TopLevel>.
+WARNING:Xst:2677 - Node <EX_MEM/mem_alu_out_c_out> of sequential type is unconnected in block <TopLevel>.
+WARNING:Xst:2677 - Node <MEM_WB/wb_alu_out_lt> of sequential type is unconnected in block <TopLevel>.
+WARNING:Xst:2677 - Node <MEM_WB/wb_alu_out_overflow> of sequential type is unconnected in block <TopLevel>.
+WARNING:Xst:2677 - Node <MEM_WB/wb_alu_out_c_out> of sequential type is unconnected in block <TopLevel>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <DigControl/FSM_0> on signal <en[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0111  | 0111
+ 1011  | 1011
+ 1101  | 1101
+ 1110  | 1110
+-------------------
+
+Optimizing unit <RegisterN> ...
+
+Optimizing unit <RegIF_ID> ...
+
+Optimizing unit <RegID_EX> ...
+
+Optimizing unit <TopLevel> ...
+
+Optimizing unit <DigitController> ...
+
+Optimizing unit <InstructionDecoder> ...
+
+Optimizing unit <ALU> ...
+INFO:Xst:2399 - RAMs <IMemory/Mram_memory6>, <IMemory/Mram_memory9> are equivalent, second RAM is removed
+INFO:Xst:2261 - The FF/Latch <IF_ID/q_8> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <IF_ID/q_5> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ex_control_immediate_15> in Unit <TopLevel> is equivalent to the following 8 FFs/Latches, which will be removed : <ID_EX/ex_control_immediate_14> <ID_EX/ex_control_immediate_13> <ID_EX/ex_control_immediate_12> <ID_EX/ex_control_immediate_11> <ID_EX/ex_control_immediate_10> <ID_EX/ex_control_immediate_9> <ID_EX/ex_control_immediate_8> <ID_EX/ex_control_immediate_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopLevel, actual ratio is 4.
+FlipFlop MEM_WB/wb_control_reg_file_in_sel_dst_0 has been replicated 2 time(s)
+FlipFlop MEM_WB/wb_control_reg_file_in_sel_dst_1 has been replicated 2 time(s)
+FlipFlop MEM_WB/wb_control_reg_file_in_sel_dst_2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <TopLevel> :
+	Found 2-bit shift register for signal <MEM_WB/wb_control_reg_file_in_we>.
+	Found 2-bit shift register for signal <MEM_WB/wb_control_disp_reg_we>.
+	Found 2-bit shift register for signal <MEM_WB/wb_control_reg_file_data_in_mux>.
+	Found 3-bit shift register for signal <MEM_WB/wb_control_op_code_0>.
+	Found 3-bit shift register for signal <MEM_WB/wb_control_op_code_1>.
+	Found 3-bit shift register for signal <MEM_WB/wb_control_op_code_2>.
+	Found 3-bit shift register for signal <MEM_WB/wb_control_op_code_3>.
+	Found 2-bit shift register for signal <Deb/d2>.
+Unit <TopLevel> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 175
+ Flip-Flops                                            : 175
+# Shift Registers                                      : 8
+ 2-bit shift register                                  : 4
+ 3-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopLevel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 433
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 7
+#      LUT2                        : 7
+#      LUT3                        : 39
+#      LUT4                        : 32
+#      LUT5                        : 119
+#      LUT6                        : 152
+#      MUXCY                       : 22
+#      MUXF7                       : 25
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 182
+#      FD                          : 148
+#      FDE                         : 34
+# RAMS                             : 28
+#      RAM16X1D                    : 8
+#      RAM256X1S                   : 15
+#      RAM32M                      : 4
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 1
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             182  out of  18224     0%  
+ Number of Slice LUTs:                  460  out of   9112     5%  
+    Number used as Logic:               360  out of   9112     3%  
+    Number used as Memory:              100  out of   2176     4%  
+       Number used as RAM:               92
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    536
+   Number with an unused Flip Flop:     354  out of    536    66%  
+   Number with an unused LUT:            76  out of    536    14%  
+   Number of fully used LUT-FF pairs:   106  out of    536    19%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+Deb/debouncedButton                | BUFG                        | 184   |
+clk                                | BUFGP                       | 22    |
+DigControl/clkdiv_1                | NONE(DigControl/en_FSM_FFd4)| 12    |
+-----------------------------------+-----------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.729ns (Maximum Frequency: 129.386MHz)
+   Minimum input arrival time before clock: 1.801ns
+   Maximum output required time after clock: 4.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Deb/debouncedButton'
+  Clock period: 7.729ns (frequency: 129.386MHz)
+  Total number of paths / destination ports: 35530 / 414
+-------------------------------------------------------------------------
+Delay:               7.729ns (Levels of Logic = 7)
+  Source:            ID_EX/ex_control_reg_file_in_sel_src_1_1 (FF)
+  Destination:       EX_MEM/mem_alu_out_data_6 (FF)
+  Source Clock:      Deb/debouncedButton rising
+  Destination Clock: Deb/debouncedButton rising
+
+  Data Path: ID_EX/ex_control_reg_file_in_sel_src_1_1 to EX_MEM/mem_alu_out_data_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  ID_EX/ex_control_reg_file_in_sel_src_1_1 (ID_EX/ex_control_reg_file_in_sel_src_1_1)
+     LUT6:I0->O           16   0.203   1.005  DHDetector/Mmux_hazard_mem_ex_111 (hazard_mem_ex_1)
+     LUT3:I2->O            1   0.205   0.580  ALU_src_1_m/Mmux_alu_in_src_113_SW0 (N18)
+     LUT5:I4->O           11   0.205   1.111  ALU_src_1_m/Mmux_alu_in_src_113 (_v1<6>)
+     LUT5:I2->O            1   0.205   0.808  ArithLogicUnit/Sh3011_SW0 (N133)
+     LUT6:I3->O            1   0.205   0.684  ArithLogicUnit/Sh3011 (ArithLogicUnit/Sh301)
+     LUT6:I4->O            1   0.203   0.580  ArithLogicUnit/Mmux_z132 (ArithLogicUnit/Mmux_z132)
+     LUT5:I4->O            1   0.205   0.000  ArithLogicUnit/Mmux_z133 (alu_out_data<6>)
+     FD:D                      0.102          EX_MEM/mem_alu_out_data_6
+    ----------------------------------------
+    Total                      7.729ns (1.980ns logic, 5.749ns route)
+                                       (25.6% logic, 74.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.241ns (frequency: 446.130MHz)
+  Total number of paths / destination ports: 10 / 8
+-------------------------------------------------------------------------
+Delay:               2.241ns (Levels of Logic = 1)
+  Source:            Deb/count_1 (FF)
+  Destination:       Deb/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Deb/count_1 to Deb/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.650  Deb/count_1 (Deb/count_1)
+     INV:I->O              2   0.206   0.616  Deb/count<1>_inv1_INV_0 (Deb/count<1>_inv)
+     FDE:CE                    0.322          Deb/count_0
+    ----------------------------------------
+    Total                      2.241ns (0.975ns logic, 1.267ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DigControl/clkdiv_1'
+  Clock period: 3.225ns (frequency: 310.102MHz)
+  Total number of paths / destination ports: 73 / 12
+-------------------------------------------------------------------------
+Delay:               3.225ns (Levels of Logic = 2)
+  Source:            DigControl/en_FSM_FFd2 (FF)
+  Destination:       DigControl/sub_sequence_3 (FF)
+  Source Clock:      DigControl/clkdiv_1 rising
+  Destination Clock: DigControl/clkdiv_1 rising
+
+  Data Path: DigControl/en_FSM_FFd2 to DigControl/sub_sequence_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.447   1.346  DigControl/en_FSM_FFd2 (DigControl/en_FSM_FFd2)
+     LUT6:I0->O            1   0.203   0.924  DigControl/Mmux_en[3]_sub_sequence[3]_wide_mux_4_OUT42 (DigControl/Mmux_en[3]_sub_sequence[3]_wide_mux_4_OUT41)
+     LUT6:I1->O            1   0.203   0.000  DigControl/Mmux_en[3]_sub_sequence[3]_wide_mux_4_OUT43 (DigControl/en[3]_sub_sequence[3]_wide_mux_4_OUT<1>)
+     FD:D                      0.102          DigControl/sub_sequence_1
+    ----------------------------------------
+    Total                      3.225ns (0.955ns logic, 2.270ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            manual_clk (PAD)
+  Destination:       Deb/Mshreg_d2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: manual_clk to Deb/Mshreg_d2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  manual_clk_IBUF (manual_clk_IBUF)
+     SRLC16E:D                -0.060          Deb/Mshreg_d2
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DigControl/clkdiv_1'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              4.877ns (Levels of Logic = 2)
+  Source:            DigControl/sub_sequence_0 (FF)
+  Destination:       segments<5> (PAD)
+  Source Clock:      DigControl/clkdiv_1 rising
+
+  Data Path: DigControl/sub_sequence_0 to segments<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.077  DigControl/sub_sequence_0 (DigControl/sub_sequence_0)
+     LUT4:I0->O            1   0.203   0.579  DigControl/SegDecoder/segments<0>1 (segments_0_OBUF)
+     OBUF:I->O                 2.571          segments_0_OBUF (segments<0>)
+    ----------------------------------------
+    Total                      4.877ns (3.221ns logic, 1.656ns route)
+                                       (66.1% logic, 33.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Deb/debouncedButton
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+Deb/debouncedButton|    7.729|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DigControl/clkdiv_1
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+DigControl/clkdiv_1|    3.225|         |         |         |
+clk                |    2.689|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+Deb/debouncedButton|    1.773|         |         |         |
+clk                |    2.241|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 9.95 secs
+ 
+--> 
+
+
+Total memory usage is 391664 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   71 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

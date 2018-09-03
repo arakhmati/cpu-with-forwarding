@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="components" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="toplevel_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/toplevel_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/manual_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">manual_clk</obj_property>
+      <obj_property name="ObjectShortName">manual_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/debounced_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">debounced_clk</obj_property>
+      <obj_property name="ObjectShortName">debounced_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input</obj_property>
+      <obj_property name="ObjectShortName">input</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/input.src_1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.src_1</obj_property>
+         <obj_property name="ObjectShortName">input.src_1</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/input.src_2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.src_2</obj_property>
+         <obj_property name="ObjectShortName">input.src_2</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/input.sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.sel</obj_property>
+         <obj_property name="ObjectShortName">input.sel</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/input.c_in" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.c_in</obj_property>
+         <obj_property name="ObjectShortName">input.c_in</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/output.data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.data</obj_property>
+         <obj_property name="ObjectShortName">output.data</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/output.c_out" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.c_out</obj_property>
+         <obj_property name="ObjectShortName">output.c_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/output.overflow" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.overflow</obj_property>
+         <obj_property name="ObjectShortName">output.overflow</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/ArithLogicUnit/output.lt" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.lt</obj_property>
+         <obj_property name="ObjectShortName">output.lt</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider23" type="divider">
+      <obj_property name="label">Reg File</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/RegFile/registers" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">registers[0:7]</obj_property>
+      <obj_property name="ObjectShortName">registers[0:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">registers[0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">registers[1]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">registers[2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">registers[3]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">registers[4]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">registers[5]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">registers[6]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/toplevel_tb/uut/RegFile/registers[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">registers[7]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider42" type="divider">
+      <obj_property name="label">IF_ID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/IF_ID/q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">q[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider43" type="divider">
+      <obj_property name="label">ID_EX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/ID_EX/ex_reg_file_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_reg_file_out</obj_property>
+      <obj_property name="ObjectShortName">ex_reg_file_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/ID_EX/ex_control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_control</obj_property>
+      <obj_property name="ObjectShortName">ex_control</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider49" type="divider">
+      <obj_property name="label">EX_MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/EX_MEM/mem_reg_file_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_reg_file_out</obj_property>
+      <obj_property name="ObjectShortName">mem_reg_file_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/EX_MEM/mem_alu_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_alu_out</obj_property>
+      <obj_property name="ObjectShortName">mem_alu_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/EX_MEM/mem_control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_control</obj_property>
+      <obj_property name="ObjectShortName">mem_control</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider50" type="divider">
+      <obj_property name="label">MEM_WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/MEM_WB/wb_reg_file_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_reg_file_out</obj_property>
+      <obj_property name="ObjectShortName">wb_reg_file_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/MEM_WB/wb_alu_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_alu_out</obj_property>
+      <obj_property name="ObjectShortName">wb_alu_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/MEM_WB/wb_d_mem_output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_d_mem_output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_d_mem_output[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/MEM_WB/wb_control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_control</obj_property>
+      <obj_property name="ObjectShortName">wb_control</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/DHDetector/hazard" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hazard</obj_property>
+      <obj_property name="ObjectShortName">hazard</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/DisplayRegister/q" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">q[15:0]</obj_property>
+      <obj_property name="label">Display Register</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/stall" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stall</obj_property>
+      <obj_property name="ObjectShortName">stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/if_instruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">if_instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">if_instruction[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/toplevel_tb/uut/DMemory/memory" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memory[0:255]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:255]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

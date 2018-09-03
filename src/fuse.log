@@ -1,0 +1,61 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_isim_beh.exe" -prj "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_beh.prj" "work.TopLevel_TB" 
+ISim P.20160913 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/SegmentDecoder.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Components.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegMEM_WB.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterN.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegisterFile.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegIF_ID.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegID_EX.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/RegEX_MEM.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionMemory.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/InstructionDecoder.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DigitController.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Debouncer.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataMemory.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/DataHazardDetector.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/Counter.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_2_mux.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU_src_1_mux.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/ALU.vhd" into library work
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" into library work
+WARNING:HDLCompiler:946 - "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel.vhd" Line 80: Actual for formal port we is neither a static name nor a globally static expression
+Parsing VHDL file "/home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 99256 KB
+Fuse CPU Usage: 1940 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package components
+Compiling architecture behavioral of entity Debouncer [\Debouncer(1)\]
+Compiling architecture behavioral of entity Counter [\Counter(8)\]
+Compiling architecture behavioural of entity InstructionMemory [\InstructionMemory(16,8)\]
+Compiling architecture behavioral of entity RegIF_ID [\RegIF_ID(16)\]
+Compiling architecture behavioral of entity InstructionDecoder [\InstructionDecoder(16)\]
+Compiling architecture behavioral of entity RegisterFile [\RegisterFile(3,16)\]
+Compiling architecture behavioral of entity RegID_EX [regid_ex_default]
+Compiling architecture behavioral of entity ALU_src_1_mux [\ALU_src_1_mux(16)\]
+Compiling architecture behavioral of entity ALU_src_2_mux [\ALU_src_2_mux(16)\]
+Compiling architecture behavioral of entity ALU [\ALU(16,3)\]
+Compiling architecture behavioral of entity RegEX_MEM [\RegEX_MEM(16)\]
+Compiling architecture behavioural of entity DataMemory [\DataMemory(16,8)\]
+Compiling architecture behavioral of entity RegMEM_WB [\RegMEM_WB(16)\]
+Compiling architecture behavioral of entity RegisterN [\RegisterN(16)\]
+Compiling architecture dataflow of entity SegmentDecoder [segmentdecoder_default]
+Compiling architecture behavioral of entity DigitController [\DigitController(1)\]
+Compiling architecture behavioral of entity DataHazardDetector [datahazarddetector_default]
+Compiling architecture structural of entity TopLevel [toplevel_default]
+Compiling architecture behavior of entity toplevel_tb
+Time Resolution for simulation is 1ps.
+Compiled 43 VHDL Units
+Built simulation executable /home/ise/Downloads/Lab2 - Pipelined with Forwarding/TopLevel_TB_isim_beh.exe
+Fuse Memory Usage: 120540 KB
+Fuse CPU Usage: 2250 ms
+GCC CPU Usage: 480 ms
